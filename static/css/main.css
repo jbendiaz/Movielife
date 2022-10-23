@@ -1,0 +1,436 @@
+body{
+	background: #bdc3c7;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.cuerpo{
+	display: grid;
+	grid-template-columns: 1fr 5fr 1fr;
+	grid-template-areas: 
+	"top top top" 
+	"nav nav nav" 
+	"bard barc bari" 
+	"barinf barinf barinf";
+	grid-column-gap: 5px;
+}
+
+.top{
+	grid-area: top;
+	background: white;
+	height: 50px;
+	display: grid;
+	grid-template-columns: 7fr 1fr 1fr 1fr;
+	grid-column-gap: 3px;
+}
+
+.top1{
+	position: relative;
+	bottom: 18px;
+	margin-left: 5px;
+}
+
+.top4{
+	margin-top: 3px;
+}
+
+.Barnav{
+	grid-area: nav;
+	margin-top: 5px;
+	background: gray;
+	opacity: 100%;
+	border: solid lightblue;
+	border-radius: 10px;
+	height: 35px;
+	padding: 4px 2px 2px 2px;
+	display: flex;
+}
+
+.nav1{
+	position: relative;
+	grid-area: nav1;
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	margin: 5px;
+}
+
+.nav2{
+	position: relative;
+	grid-area: nav2;
+	margin: 5px;
+}
+
+.bn1, .bn2, .bn3{
+	font-size: 15px;
+	border-radius: 5px;
+	background: white;
+	color: black;
+	margin-left: 5px;
+	border-right: solid 2px;
+	padding: 3px 5px 3px 5px;
+}
+
+.bn4{
+	font-size: 15px;
+	border-radius: 5px;
+	background: white;
+	border-right: solid 2px;
+	width: 150px;
+	padding: 3px 0px 3px 1px;
+}
+
+.bn42{
+	display: inline-block;
+	color: black;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+
+.BarDerecha{
+	display: inline-block;	
+	grid-area: bard ;
+	border-radius: 10px;
+	height: 1500px;
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+}
+.hd1{
+	background: white;
+	border: solid lightblue;
+	border-radius: 10px;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 5px 10px 5px 10px;
+}
+
+.hd2{
+	background: white;
+	border: solid lightblue;
+	border-radius: 10px;
+	margin-top: 10px;
+	margin-bottom: 0;
+	padding: 5px 10px 5px 10px;
+}
+
+.Noticia{
+	background: white;
+	display: inline-block;
+	margin-top: 3px;
+	border-radius: 10px;
+	margin-bottom: 0;
+	border: solid lightblue;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.Estrenos{
+	display: inline-block;
+	background: white;
+	border-radius: 10px;
+	margin-top: 3px;
+	margin-bottom: 0;
+	border: solid lightblue;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.BarCentral{
+	grid-area: barc;
+	height: 1500px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	grid-template-areas: 
+	"item1 item1 item2"
+	"item1 item1 item3"
+	"item4 item4 item4"
+	"item5 item6 item7"
+	"item8 item9 item10";
+}
+
+.item1{
+	background: white;
+	border: solid lightblue;
+	border-radius: 10px;
+	grid-area: item1;
+}
+
+.item2{
+	background: white;
+	border: solid lightblue;
+	border-radius: 10px;
+	grid-area: item2;
+}
+
+.item3{
+	background: white;
+	border: solid lightblue;
+	border-radius: 10px;
+	grid-area: item3;
+}
+
+.item4{
+	background: white;
+	border: solid lightblue;
+	border-radius: 10px;
+	grid-area: item4;
+}
+
+.item5{
+	background: white;
+	border: solid lightblue;
+	border-radius: 10px;
+	grid-area: item5;
+}
+
+.item6{
+	background: white;
+	border: solid lightblue;
+	border-radius: 10px;
+	grid-area: item6;
+}
+
+.item7{
+	background: white;
+	border: solid lightblue;
+	border-radius: 10px;
+	grid-area: item7;
+}
+
+.item8{
+	background: white;
+	border: solid lightblue;
+	border-radius: 10px;
+	grid-area: item8;
+}
+
+.item9{
+	background: white;
+	border: solid lightblue;
+	border-radius: 10px;
+	grid-area: item9;
+}
+
+.item10{
+	background: white;
+	border: solid lightblue;
+	border-radius: 10px;
+	grid-area: item10;
+}
+
+.Registro{
+	grid-area: barc;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	grid-template-areas: "item1";
+
+}
+
+.Regis{
+	background: white;
+	border: solid lightblue;
+	border-radius: 10px;
+	grid-area: item1;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-areas: ". cua .";
+}
+
+.Regis2{
+	font-family: calibre;
+	font-weight: bold;
+	font-size: 15px;	
+	grid-area: cua;
+	border: solid 1px;
+	margin: 20px 50px 20px 50px;
+	padding: 50px 100px 30px 100px;
+	background: lightblue;
+}
+
+
+.Noticiaweb{
+	grid-area: barc;
+	height: 1500px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	grid-template-areas: 
+	"not1 not1 not1"
+	"not2 not2 not2"
+	"not3 not3 not3"
+	"not4 not4 not4"
+	"not5 not5 not5"
+	"not6 not6 not6"
+	"not7 not7 not7"
+	"not8 not8 not8"
+	"not9 not9 not9"
+	"not10 not10 not10";
+
+}
+
+.not1, .not2, .not3, .not4, .not5, .not6, .not7, .not8, .not9, .not10{
+	background: white;
+	border: solid lightblue;
+	border-radius: 10px;
+}
+
+.not1{
+	grid-area: not1;
+}
+
+.not2{
+	grid-area: not2;
+}
+
+.not3{
+	grid-area: not3;
+}
+
+.not4{
+	grid-area: not4;
+}
+
+.not5{
+	grid-area: not5;
+}
+
+.not6{
+	grid-area: not6;
+}
+
+.not7{
+	grid-area: not7;
+}
+
+.not8{
+	grid-area: not8;
+}
+
+.not9{
+	grid-area: not9;
+}
+
+.not10{
+	grid-area: not10;
+}
+
+.BarIzquierda{
+	grid-area: bari;
+	height: 1500px;
+	margin-top: 22px;
+}
+
+.Buscador{
+	display: flex;
+	flex-wrap: wrap;
+	background: white;
+	border: solid lightblue;
+	border-radius: 10px;
+	padding: 5px 10px 5px 10px;
+}
+
+.hi1, .hi2{
+	background: white;
+	margin-top: 10px;
+	margin-bottom: 0;
+	border: solid lightblue;
+	border-radius: 10px;
+	padding: 5px 10px 5px 10px;
+}
+
+.hi2{
+	margin-top: 3px;
+}
+
+.Genero{
+	background: white;
+	padding: 5px 10px 5px 10px;
+	border: solid lightblue;
+	border-radius: 10px;
+	margin-top: 3px;
+	font-size: 15px;
+	display: grid;
+	grid-template-areas: 
+	"gen1 gen2"
+	"gen3 gen4"
+	"gen5 gen6"
+	"gen7 gen8"
+	"gen9 gen10"
+	"gen11 .";
+}
+
+.gen1{
+	grid-area: gen1;
+	padding: 0 4px 7px 4px;
+}
+
+.gen2{
+	grid-area: gen2;
+	padding: 0 4px 7px 4px;
+}
+
+.gen3{
+	grid-area: gen3;
+	padding: 0 4px 7px 4px;
+}
+
+.gen4{
+	grid-area: gen4;
+	padding: 0 4px 7px 4px;
+}
+
+.gen5{
+	grid-area: gen5;
+	padding: 0 4px 7px 4px;
+}
+
+.gen6{
+	grid-area: gen6;
+	padding: 0 4px 7px 4px;
+}
+
+.gen7{
+	grid-area: gen7;
+	padding: 0 4px 7px 4px;
+}
+
+.gen8{
+	grid-area: gen8;
+	padding: 0 4px 7px 4px;
+}
+
+.gen9{
+	grid-area: gen9;
+	padding: 0 4px 7px 4px;
+}
+
+.gen10{
+	grid-area: gen10;
+	padding: 0 4px 7px 4px;
+}
+
+.gen11{
+	grid-area: gen11;
+	padding: 0 4px 7px 4px;
+}
+
+.barinf{
+	border: solid lightblue;
+	border-radius: 10px;
+	grid-area: barinf;
+	background: white;
+}

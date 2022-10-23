@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %} {% endblock %}</title>
+  <!--bootstrap -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+  <!-- css personal -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css')}}">
+</head>
+<body>
+  <div class="cuerpo">
+
+    <header class="top">
+      <a href="/"><h1 class="top1">Movie Life</h1></a>
+      <div class="top2"><label for="email">Usuario</label>
+        <input type="text" id="email" ></div>
+      <div class="top3"><label for="Contraseña">Contraseña</label>
+        <input type="password" name="Contraseña" id="Contraseña"></div>
+      <div class="top4">
+      <button>Login</button>
+      <button><a href="/registro">Registrarse</a></button>
+      </div>
+    </header>
+
+    <nav class="Barnav ">
+      <div class="nav1">
+        <a href="/noticia" class="bn1">NOTICIA</a>
+        <a href="C:\Users\Mr. Robot\Desktop\Movie Life\Estrenos/Estrenos.html" class="bn2">ESTRENOS</a>
+        <a href="C:\Users\Mr. Robot\Desktop\Movie Life\Eventos/Eventos.html" class="bn3">EVENTOS</a>
+      </div>
+      <div class="nav2">
+        <details class="bn4"><summary>DESCARGAS</summary>
+            <a href="C:\Users\Mr. Robot\Desktop\Movie Life\Descargas\Todas/Todas.html" class="bn42">Todas</a><br>
+            <a href="C:\Users\Mr. Robot\Desktop\Movie Life\Descargas\Recientes/Recientes.html" class="bn42">Estrenos</a><br>
+            <details class="bn42"><summary>Generos</summary>
+              <ul>
+                <li>Animación</li>
+                <li>Acción</li>
+                <li>Comedia</li>
+              </ul>
+            </details></li>
+        </details>
+      </div>
+    </nav>
+
+    <div class="BarDerecha">
+      <h3 class="hd1">Noticia</h3>
+        <ul class="Noticia">
+          <li><a href="C:\Users\Mr. Robot\Desktop\Movie Life\Noticia\Disney/Disney.html">Disney</a></li>
+          <li><a href="C:\Users\Mr. Robot\Desktop\Movie Life\Noticia\Warnner/Warner.html">Warner</a></li>
+          <li><a href="C:\Users\Mr. Robot\Desktop\Movie Life\Noticia\Marvel/Marvel.html">Marvel</a></li>
+          <li><a href="C:\Users\Mr. Robot\Desktop\Movie Life\Noticia\DC Comic/DC Comic.html">DC Comic</a></li>
+        </ul>
+      <h3 class="hd2">Eventos</h3>
+        <ul class="Estrenos">
+          <li><a href="C:\Users\Mr. Robot\Desktop\Movie Life\Eventos\Disney/Disney.html">Disney</a></li>
+          <li><a href="C:\Users\Mr. Robot\Desktop\Movie Life\Eventos\Warnner/Warner.html">Warner</a></li>
+          <li><a href="C:\Users\Mr. Robot\Desktop\Movie Life\Eventos\Marvel/Marvel.html">Marvel</a></li>
+          <li><a href="C:\Users\Mr. Robot\Desktop\Movie Life\Eventos\DC Comic/DC Comic.html">DC Comic</a></li>
+        </ul>
+    </div> 
+  {% block body %}
+
+  {% endblock %}
+    <div class="BarIzquierda">
+      <div class="Buscador">
+        <input type="text" id="serch">
+        <button>Buscar</button>
+      </div>
+      <h2 class="hi1">Descarga</h2>
+        <h3 class="hi2">Genero</h3>
+        <div class="Genero">
+          <div class="gen1"><a href="">Animación</a></div>
+          <div class="gen2"><a href="">Acción</a></div>
+          <div class="gen3"><a href="">Comedia</a></div>
+          <div class="gen4"><a href="">Musical</a></div>
+          <div class="gen5"><a href="">Suspenso</a></div>
+          <div class="gen6"><a href="">Thriller</a></div>
+          <div class="gen7"><a href="">Terror</a></div>
+          <div class="gen8"><a href="">Romance</a></div>
+          <div class="gen9"><a href="">Western</a></div>
+          <div class="gen10"><a href="">Documental</a></div>
+          <div class="gen11"><a href="">Bio pic</a></div>
+        </div>
+    </div>
+
+    <footer class="barinf">
+      <div>
+        <h3>Redes Sociales</h3>
+      </div>
+    </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+</body>
+</html>
