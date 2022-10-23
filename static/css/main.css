@@ -328,6 +328,69 @@ body{
 	grid-area: not10;
 }
 
+.Peliculas{
+	grid-area: barc;
+	height: 1500px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	grid-template-areas: 
+	"peli1 peli2 peli3"
+	"peli4 peli5 peli6"
+	"peli7 peli8 peli9"
+	"peli10 . .";
+}
+
+.peli1, .peli2, .peli3, .peli4, .peli5, .peli6, .peli7, .peli8, .peli9, .peli10{
+	background: white;
+	border: solid lightblue;
+	border-radius: 10px;
+}
+
+.peli1{
+	grid-area: peli1;
+}
+
+
+.peli2{
+	grid-area: peli2;
+}
+
+.peli3{
+	grid-area: peli3;
+}
+
+.peli4{
+	grid-area: peli4;
+}
+
+.peli5{
+	grid-area: peli5;
+}
+
+.peli6{
+	grid-area: peli6;
+}
+
+.peli7{
+	grid-area: peli7;
+}
+
+.peli8{
+	grid-area: peli8;
+}
+
+.peli9{
+	grid-area: peli9;
+}
+
+.peli10{
+	grid-area: peli10;
+}
+
 .BarIzquierda{
 	grid-area: bari;
 	height: 1500px;
