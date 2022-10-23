@@ -18,16 +18,18 @@ body{
 .top{
 	grid-area: top;
 	background: white;
-	height: 50px;
+	height: 70px;
 	display: grid;
 	grid-template-columns: 7fr 1fr 1fr 1fr;
 	grid-column-gap: 3px;
 }
 
 .top1{
-	position: relative;
-	bottom: 18px;
 	margin-left: 5px;
+}
+
+.form-floating{
+	margin-top: 5px;
 }
 
 .top4{
@@ -39,11 +41,12 @@ body{
 	margin-top: 5px;
 	background: gray;
 	opacity: 100%;
-	border: solid lightblue;
+	border: solid black;
 	border-radius: 10px;
-	height: 35px;
+	height: 50px;
 	padding: 4px 2px 2px 2px;
 	display: flex;
+	flex-wrap: wrap-reverse;
 }
 
 .nav1{
@@ -61,14 +64,9 @@ body{
 	margin: 5px;
 }
 
-.bn1, .bn2, .bn3{
-	font-size: 15px;
-	border-radius: 5px;
-	background: white;
-	color: black;
-	margin-left: 5px;
+.bn1{
+	padding-right: 10px;
 	border-right: solid 2px;
-	padding: 3px 5px 3px 5px;
 }
 
 .bn4{
@@ -98,9 +96,9 @@ body{
 	flex-direction: column;
 	justify-content: start;
 }
-.hd1{
+.hd1, .hd2{
 	background: white;
-	border: solid lightblue;
+	border: solid black;
 	border-radius: 10px;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -108,32 +106,16 @@ body{
 }
 
 .hd2{
-	background: white;
-	border: solid lightblue;
-	border-radius: 10px;
 	margin-top: 10px;
-	margin-bottom: 0;
-	padding: 5px 10px 5px 10px;
 }
 
-.Noticia{
+.Noticia, .Estrenos{
 	background: white;
 	display: inline-block;
 	margin-top: 3px;
 	border-radius: 10px;
 	margin-bottom: 0;
-	border: solid lightblue;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-.Estrenos{
-	display: inline-block;
-	background: white;
-	border-radius: 10px;
-	margin-top: 3px;
-	margin-bottom: 0;
-	border: solid lightblue;
+	border: solid black;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
@@ -155,73 +137,46 @@ body{
 	"item8 item9 item10";
 }
 
-.item1{
+.item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9, .item10{
 	background: white;
-	border: solid lightblue;
+	border: solid black;
 	border-radius: 10px;
 	grid-area: item1;
 }
 
 .item2{
-	background: white;
-	border: solid lightblue;
-	border-radius: 10px;
 	grid-area: item2;
 }
 
 .item3{
-	background: white;
-	border: solid lightblue;
-	border-radius: 10px;
 	grid-area: item3;
 }
 
 .item4{
-	background: white;
-	border: solid lightblue;
-	border-radius: 10px;
 	grid-area: item4;
 }
 
 .item5{
-	background: white;
-	border: solid lightblue;
-	border-radius: 10px;
 	grid-area: item5;
 }
 
 .item6{
-	background: white;
-	border: solid lightblue;
-	border-radius: 10px;
 	grid-area: item6;
 }
 
 .item7{
-	background: white;
-	border: solid lightblue;
-	border-radius: 10px;
 	grid-area: item7;
 }
 
 .item8{
-	background: white;
-	border: solid lightblue;
-	border-radius: 10px;
 	grid-area: item8;
 }
 
 .item9{
-	background: white;
-	border: solid lightblue;
-	border-radius: 10px;
 	grid-area: item9;
 }
 
 .item10{
-	background: white;
-	border: solid lightblue;
-	border-radius: 10px;
 	grid-area: item10;
 }
 
@@ -239,7 +194,7 @@ body{
 
 .Regis{
 	background: white;
-	border: solid lightblue;
+	border: solid black;
 	border-radius: 10px;
 	grid-area: item1;
 	display: grid;
@@ -284,7 +239,7 @@ body{
 
 .not1, .not2, .not3, .not4, .not5, .not6, .not7, .not8, .not9, .not10{
 	background: white;
-	border: solid lightblue;
+	border: solid black;
 	border-radius: 10px;
 }
 
@@ -346,7 +301,7 @@ body{
 
 .peli1, .peli2, .peli3, .peli4, .peli5, .peli6, .peli7, .peli8, .peli9, .peli10{
 	background: white;
-	border: solid lightblue;
+	border: solid black;
 	border-radius: 10px;
 }
 
@@ -401,7 +356,7 @@ body{
 	display: flex;
 	flex-wrap: wrap;
 	background: white;
-	border: solid lightblue;
+	border: solid black;
 	border-radius: 10px;
 	padding: 5px 10px 5px 10px;
 }
@@ -410,7 +365,7 @@ body{
 	background: white;
 	margin-top: 10px;
 	margin-bottom: 0;
-	border: solid lightblue;
+	border: solid black;
 	border-radius: 10px;
 	padding: 5px 10px 5px 10px;
 }
@@ -422,7 +377,7 @@ body{
 .Genero{
 	background: white;
 	padding: 5px 10px 5px 10px;
-	border: solid lightblue;
+	border: solid black;
 	border-radius: 10px;
 	margin-top: 3px;
 	font-size: 15px;
@@ -492,7 +447,7 @@ body{
 }
 
 .barinf{
-	border: solid lightblue;
+	border: solid black;
 	border-radius: 10px;
 	grid-area: barinf;
 	background: white;

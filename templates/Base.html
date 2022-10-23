@@ -13,17 +13,68 @@
   <div class="cuerpo">
 
     <header class="top">
-      <a href="/"><h1 class="top1">Movie Life</h1></a>
+      <a class="dropdown-item" href="/"><h1 class="top1">Movie Life</h1></a>
+
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Usuario</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Contraseña</label>
+      </div>
+
+      <div class="top4">
+        <button>Entrar</button>
+        <button><a class="dropdown-item" href="/registro">Registrarse</a></button>
+      </div>
+
+<!--
       <div class="top2"><label for="email">Usuario</label>
         <input type="text" id="email" ></div>
       <div class="top3"><label for="Contraseña">Contraseña</label>
-        <input type="password" name="Contraseña" id="Contraseña"></div>
+        <input type="password" autocomplete="" name="Contraseña" id="Contraseña"></div>
       <div class="top4">
       <button>Login</button>
       <button><a href="/registro">Registrarse</a></button>
       </div>
+-->
     </header>
 
+    <nav class="navbar navbar-expand-lg bg-light Barnav">
+      <div class="container-fluid">
+        <a class="navbar-brand bn1" href="/noticia">Noticia</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="navbar-brand bn1" aria-current="page" href="/eventos">Eventos</a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand bn1" href="/estrenos">Estrenos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="navbar-brand dropdown-toggle bn1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Descargar
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/todas_las_peliculas">Todas</a></li>
+                <li><a class="dropdown-item" href="/peliculas_recientes">Recientes</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Genero</a></li>
+              </ul>
+            </li>
+           </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+<!--
     <nav class="Barnav ">
       <div class="nav1">
         <a href="/noticia" class="bn1">NOTICIA</a>
@@ -44,45 +95,55 @@
         </details>
       </div>
     </nav>
+-->
 
     <div class="BarDerecha">
       <h3 class="hd1">Noticia</h3>
-        <ul class="Noticia">
-          <li><a href="/disney">Disney</a></li>
-          <li><a href="/warner">Warner</a></li>
-          <li><a href="/marvel">Marvel</a></li>
-          <li><a href="/dc">DC Comic</a></li>
+        <ul class="Noticia list-group list-group-flush">
+          <li class="list-group-item"><a class="dropdown-item" aria-current="page" href="/disney">Disney</a></li>
+          <li class="list-group-item"><a class="dropdown-item" href="/warner">Warner</a></li>
+          <li class="list-group-item"><a class="dropdown-item" href="/marvel">Marvel</a></li>
+          <li class="list-group-item"><a class="dropdown-item" href="/dc">DC Comic</a></li>
         </ul>
       <h3 class="hd2">Eventos</h3>
-        <ul class="Estrenos">
-          <li><a href="/disneye">Disney</a></li>
-          <li><a href="/warnere">Warner</a></li>
-          <li><a href="/marvele">Marvel</a></li>
-          <li><a href="/dce">DC Comic</a></li>
+        <ul class="Estrenos list-group list-group-flush">
+          <li class="list-group-item"><a class="dropdown-item" href="/disneye">Disney</a></li>
+          <li class="list-group-item"><a class="dropdown-item" href="/warnere">Warner</a></li>
+          <li class="list-group-item"><a class="dropdown-item" href="/marvele">Marvel</a></li>
+          <li class="list-group-item"><a class="dropdown-item" href="/dce">DC Comic</a></li>
         </ul>
     </div> 
   {% block body %}
 
   {% endblock %}
     <div class="BarIzquierda">
+
       <div class="Buscador">
-        <input type="text" id="serch">
-        <button>Buscar</button>
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
       </div>
+<!--        
+        <input type="text" id="serch">
+        <button>Buscar</button>   
+-->
       <h2 class="hi1">Descarga</h2>
+
         <h3 class="hi2">Genero</h3>
+
         <div class="Genero">
-          <div class="gen1"><a href="">Animación</a></div>
-          <div class="gen2"><a href="">Acción</a></div>
-          <div class="gen3"><a href="">Comedia</a></div>
-          <div class="gen4"><a href="">Musical</a></div>
-          <div class="gen5"><a href="">Suspenso</a></div>
-          <div class="gen6"><a href="">Thriller</a></div>
-          <div class="gen7"><a href="">Terror</a></div>
-          <div class="gen8"><a href="">Romance</a></div>
-          <div class="gen9"><a href="">Western</a></div>
-          <div class="gen10"><a href="">Documental</a></div>
-          <div class="gen11"><a href="">Bio pic</a></div>
+          <div class="gen1"><a class="dropdown-item" href="">Animación</a></div>
+          <div class="gen2"><a class="dropdown-item" href="">Acción</a></div>
+          <div class="gen3"><a class="dropdown-item" href="">Comedia</a></div>
+          <div class="gen4"><a class="dropdown-item" href="">Musical</a></div>
+          <div class="gen5"><a class="dropdown-item" href="">Suspenso</a></div>
+          <div class="gen6"><a class="dropdown-item" href="">Thriller</a></div>
+          <div class="gen7"><a class="dropdown-item" href="">Terror</a></div>
+          <div class="gen8"><a class="dropdown-item" href="">Romance</a></div>
+          <div class="gen9"><a class="dropdown-item" href="">Western</a></div>
+          <div class="gen10"><a class="dropdown-item" href="">Documental</a></div>
+          <div class="gen11"><a class="dropdown-item" href="">Bio pic</a></div>
         </div>
     </div>
 
