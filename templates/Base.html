@@ -13,35 +13,7 @@
   <div class="cuerpo">
 
     <header class="top">
-      <a class="dropdown-item" href="/"><h1 class="top1">Movie Life</h1></a>
-
-      <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Usuario</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Contraseña</label>
-      </div>
-
-      <div class="top4">
-        <button>Entrar</button>
-        <button><a class="dropdown-item" href="/registro">Registrarse</a></button>
-      </div>
-
-<!--
-      <div class="top2"><label for="email">Usuario</label>
-        <input type="text" id="email" ></div>
-      <div class="top3"><label for="Contraseña">Contraseña</label>
-        <input type="password" autocomplete="" name="Contraseña" id="Contraseña"></div>
-      <div class="top4">
-      <button>Login</button>
-      <button><a href="/registro">Registrarse</a></button>
-      </div>
--->
-    </header>
-
-    <nav class="navbar navbar-expand-lg bg-light Barnav">
+    <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
         <a class="navbar-brand bn1" href="/noticia">Noticia</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,6 +46,29 @@
           </div>
         </div>
       </nav>
+    </header>
+
+    <div class="Barnav">
+      <a class="dropdown-item" href="/"><h1 class="top1">Movie Life</h1></a>
+
+      <div class="bot">
+          <button class="us"><a class="dropdown-item" href="/inicio_de_sesion">Entrar</button>
+          <button class="re"><a class="dropdown-item" href="/registro">Registrarse</a></button>
+      </div>
+    </div>
+<!--
+      <div class="top2"><label for="email">Usuario</label>
+        <input type="text" id="email" ></div>
+      <div class="top3"><label for="Contraseña">Contraseña</label>
+        <input type="password" autocomplete="" name="Contraseña" id="Contraseña"></div>
+      <div class="top4">
+      <button>Login</button>
+      <button><a href="/registro">Registrarse</a></button>
+      </div>
+-->
+   
+
+
 <!--
     <nav class="Barnav ">
       <div class="nav1">
@@ -97,6 +92,7 @@
     </nav>
 -->
 
+<div class="Content">
     <div class="BarDerecha">
       <h3 class="hd1">Noticia</h3>
         <ul class="Noticia list-group list-group-flush">
@@ -112,22 +108,19 @@
           <li class="list-group-item"><a class="dropdown-item" href="/marvele">Marvel</a></li>
           <li class="list-group-item"><a class="dropdown-item" href="/dce">DC Comic</a></li>
         </ul>
-    </div> 
-  {% block body %}
 
-  {% endblock %}
-    <div class="BarIzquierda">
-
+<!-- 
       <div class="Buscador">
         <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Buscar</button>
         </form>
       </div>
-<!--        
+       
         <input type="text" id="serch">
         <button>Buscar</button>   
 -->
+
       <h2 class="hi1">Descarga</h2>
 
         <h3 class="hi2">Genero</h3>
@@ -145,7 +138,11 @@
           <div class="gen10"><a class="dropdown-item" href="">Documental</a></div>
           <div class="gen11"><a class="dropdown-item" href="">Bio pic</a></div>
         </div>
-    </div>
+    </div> 
+  {% block body %}
+
+  {% endblock %}
+</div>
 
     <footer class="barinf">
       <div>
