@@ -90,9 +90,9 @@ def load_user(id):
 
 @app.route("/")
 def index():
-	return redirect(url_for("principal"))
+	return render_template("index.html")
 
-@app.route("/index", methods=["GET", "POST"])
+@app.route("/inicio_de_sesion", methods=["GET", "POST"])
 def principal():
 	if request.method == "POST":
 		user = User(0, request.form["username"], request.form["password"])
@@ -103,25 +103,21 @@ def principal():
 				return redirect(url_for('indexlogin'))
 			else:
 				flash("CLave Incorrecta")
-				return render_template("index.html")
+				return render_template("login.html")
 		else:
 			flash("Error de Usuario")
-			return render_template("index.html")
+			return render_template("login.html")
 	else:
-		return  render_template("index.html")
+		return  render_template("login.html")
 
 @app.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('principal'))
+    return redirect(url_for('index'))
 
 @app.route("/registro")
 def registro():
 	return  render_template("Registro.html")
-
-@app.route("/inicio_de_sesion")
-def inicio():
-	return  render_template("login.html")
 
 @app.route("/noticia")
 def noticia():
