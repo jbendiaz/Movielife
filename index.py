@@ -21,7 +21,6 @@ def index():
 	return render_template("index.html")
 
 @app.route("/login/inicio")
-@login_required
 def indexlogin():
 	return  render_template("/login/index.html")
 
