@@ -1,0 +1,44 @@
+{% extends "./Base.html" %}
+
+
+{% block title %} Inicio de Sesión	{% endblock %}
+
+
+{% block body %}
+	<form class="form-floating mb-3 top4" action="/inicio_de_sesion" method="POST">
+	<div class="Registro">
+		<div class="Regis">
+			<div class="Regis2">
+			<form class="form-floating mb-3 top4" action="/index" method="POST">
+		    <div>
+		        {% with messages = get_flashed_messages() %}
+
+		        {% if messages %}
+		        {% for message in messages %}
+		        <div class="alert alert-primary alert-dismissible" role="alert">
+		            <strong>{{ message }}</strong>
+		            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		        </div>
+		        {% endfor %}
+		        {% endif %}
+
+		        {% endwith %}
+		        <div class="form-floating mb-3">
+		          <input type="text" class="form-control" id="floatingInput" name="username" placeholder="name@example.com">
+		          <label for="floatingInput">Usuario</label>
+		        </div>
+		        <div class="form-floating">
+		          <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
+		          <label for="floatingPassword">Contraseña</label>
+		        </div>
+		        <div>
+		          <button type="submit">Entrar</button>
+		          <button><a class="dropdown-item" href="/registro">Registrarse</a></button>
+		        </div>
+		    </div> 
+		    </div>
+    	</div>
+    </div> 
+    </form>
+
+{% endblock %}

@@ -16,16 +16,12 @@ csrf = CSRFProtect()
 db = MySQL(app)
 login_manager_app = LoginManager(app)
 
-@app.before_request
-def before_request():
-	print("Antes de...")
-
-@app.after_request
-def after_request(response):
-	print("Despues de...")
-	return response
+@app.route("/", methods=["GET"])
+def index():
+	return render_template("index.html")
 
 @app.route("/login/inicio")
+@login_required
 def indexlogin():
 	return  render_template("/login/index.html")
 
@@ -87,10 +83,6 @@ def rpeliculaslogin():
 @login_manager_app.user_loader
 def load_user(id):
     return ModelUser.get_by_id(db, id)
-
-@app.route("/", methods=["GET"])
-def index():
-	return render_template("index.html")
 
 @app.route("/inicio_de_sesion", methods=["GET", "POST"])
 def principal():
@@ -171,38 +163,15 @@ def tpeliculas():
 def rpeliculas():
 	return  render_template("Recientes.html")	
 
-
-
-
-def query_string():
-	print(request)
-	print(request.args)
-	print(request.args.get("param1"))
-	return "ok"
-
-#@app.route("/usuario")
-#def list_usuario():
-#	data={}
-#	try:
-#		cursor = conexion.connection.cursor()
-#		slq = "SELECT * FROM `usuario` WHERE 1"
-#		cursor.execute(sql)
-#		usuario = cursor.fetchall()
-#		data["mensaje"] = "Excelente..."
-#	except Exception as ex:
-#		data["mensaje"] = "Error..."
-#	return jsonify(data)
-
 def status_404(error):
 	#return render_template("404.html"), 404
 	return redirect(url_for("index"))
 
-#def status_405(error):
-    #return redirect(url_for('principal'))
+def status_405(error):
+    return redirect(url_for('principal'))
 
 if __name__ == "__main__":
 	app.config.from_object(config['development'])
-	app.add_url_rule("/query_string", view_func=query_string)
-	#app.register_error_handler(405, status_405)
+	app.register_error_handler(405, status_405)
 	app.register_error_handler(404, status_404)
-	app.run(port=5022)
+	app.run()
