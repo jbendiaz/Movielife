@@ -20,65 +20,6 @@ login_manager_app = LoginManager(app)
 def index():
 	return render_template("index.html")
 
-@app.route("/login/inicio")
-def indexlogin():
-	return  render_template("/login/index.html")
-
-@app.route("/login/noticia")
-def noticialogin():
-	return  render_template("/login/Noticia.html")
-
-@app.route("/login/warner")
-def warnerlogin():
-	return  render_template("/login/Warner.html")
-
-@app.route("/login/marvel")
-def marvelogin():
-	return  render_template("/login/Marvel.html")
-
-@app.route("/login/dc")
-def dclogin():
-	return  render_template("/login/DC Comic.html")
-
-@app.route("/login/disney")
-def disneylogin():
-	return  render_template("/login/Disney.html")
-
-@app.route("/login/estrenos")
-def estrenoslogin():
-	return  render_template("/login/Estrenos.html")
-
-@app.route("/login/eventos")
-def eventoslogin():
-	return  render_template("/login/Eventos.html")
-
-@app.route("/login/warnere")
-def warnerelogin():
-	return  render_template("/login/WarnerE.html")
-
-@app.route("/login/marvele")
-def marvelelogin():
-	return  render_template("/login/MarvelE.html")
-
-@app.route("/login/disneye")
-def disneyelogin():
-	return  render_template("/login/DisneyE.html")
-
-@app.route("/login/dce")
-def dcelogin():
-	return  render_template("/login/DC ComicE.html")
-
-@app.route("/login/todas_las_peliculas")
-def tpeliculaslogin():
-	return  render_template("/login/Todas las pelis.html")
-
-@app.route("/login/peliculas_recientes")
-def rpeliculaslogin():
-	return  render_template("/login/Recientes.html")
-
-
-
-
 @login_manager_app.user_loader
 def load_user(id):
     return ModelUser.get_by_id(db, id)
@@ -160,7 +101,65 @@ def tpeliculas():
 
 @app.route("/peliculas_recientes")
 def rpeliculas():
-	return  render_template("Recientes.html")	
+	return  render_template("Recientes.html")
+
+
+
+@app.route("/login/inicio")
+def indexlogin():
+	return  render_template("/login/index.html")
+
+@app.route("/login/noticia")
+def noticialogin():
+	return  render_template("/login/Noticia.html")
+
+@app.route("/login/warner")
+def warnerlogin():
+	return  render_template("/login/Warner.html")
+
+@app.route("/login/marvel")
+def marvelogin():
+	return  render_template("/login/Marvel.html")
+
+@app.route("/login/dc")
+def dclogin():
+	return  render_template("/login/DC Comic.html")
+
+@app.route("/login/disney")
+def disneylogin():
+	return  render_template("/login/Disney.html")
+
+@app.route("/login/estrenos")
+def estrenoslogin():
+	return  render_template("/login/Estrenos.html")
+
+@app.route("/login/eventos")
+def eventoslogin():
+	return  render_template("/login/Eventos.html")
+
+@app.route("/login/warnere")
+def warnerelogin():
+	return  render_template("/login/WarnerE.html")
+
+@app.route("/login/marvele")
+def marvelelogin():
+	return  render_template("/login/MarvelE.html")
+
+@app.route("/login/disneye")
+def disneyelogin():
+	return  render_template("/login/DisneyE.html")
+
+@app.route("/login/dce")
+def dcelogin():
+	return  render_template("/login/DC ComicE.html")
+
+@app.route("/login/todas_las_peliculas")
+def tpeliculaslogin():
+	return  render_template("/login/Todas las pelis.html")
+
+@app.route("/login/peliculas_recientes")
+def rpeliculaslogin():
+	return  render_template("/login/Recientes.html")
 
 def status_404(error):
 	#return render_template("404.html"), 404
