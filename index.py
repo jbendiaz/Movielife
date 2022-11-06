@@ -88,7 +88,7 @@ def rpeliculaslogin():
 def load_user(id):
     return ModelUser.get_by_id(db, id)
 
-@app.route("/")
+@app.route("/", methods=["GET"])
 def index():
 	return render_template("index.html")
 
