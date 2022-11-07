@@ -5,11 +5,10 @@
 
 
 {% block body %}
-	<form class="form-floating mb-3 top4" action="/inicio_de_sesion" method="POST">
 	<div class="Registro">
 		<div class="Regis">
 			<div class="Regis2">
-			<form class="form-floating mb-3 top4" action="/index" method="POST">
+			<form class="form-floating mb-3 top4" action="/inicio_de_sesion" method="POST">
 		    <div>
 		        {% with messages = get_flashed_messages() %}
 
@@ -36,9 +35,10 @@
 		          <button><a class="dropdown-item" href="/registro">Registrarse</a></button>
 		        </div>
 		    </div> 
+		    </form>
 		    </div>
     	</div>
     </div> 
-    </form>
+    
 
 {% endblock %}

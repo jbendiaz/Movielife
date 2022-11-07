@@ -63,49 +63,12 @@ body{
 	grid-area: re;
 }
 
-.Content{
-	height: 100%;
-	padding: 0 0 1% 0;
-	margin: 0 1% 1% 1%;
-	grid-area: cont;
-	display: grid;
-	grid-template-columns: 1fr 6fr;
-	grid-template-areas: "BD BC";
-}
-
-.BarDerecha{
-	margin: 4% 3% 0 0;
-	grid-area: BD;
-	display: inline-block;	
-	display: flex;
-	flex-direction: column;
-	justify-content: start;
-}
-.hd1, .hd2{
-	color: white;
-	border-right: solid white 0.5px;
-	margin-top: 0;
-	margin-bottom: 0;
-	padding: 5px 10px 5px 10px;
-}
-
-.hd2{
-	margin-top: 10px;
-}
-
-.Noticia, .Estrenos{
-	color: white;
-	display: inline-block;
-	margin-top: 3px;
-	margin-bottom: 0;
-	border-right: solid white 0.5px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
 .BarCentral{
+	width: 99%;
+	height: 100%;
 	padding: 0.8% 0 0 0;
-	grid-area: BC;
+	margin: 0 0% 20% 0.5%;
+	grid-area: cont;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-column-gap: 2%;
@@ -119,6 +82,7 @@ body{
 }
 
 .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9, .item10{
+
 	color: white;
 	border: solid white 0.5px;
 	grid-area: item1;
@@ -161,8 +125,11 @@ body{
 }
 
 .Registro{
+	width: 99%;
+	height: 100%;
 	padding: 0.8% 0 0 0;
-	grid-area: BC;
+	margin: 0 0% 20% 0.5%;
+	grid-area: cont;
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
 	grid-column-gap: 5px;
@@ -194,8 +161,11 @@ body{
 
 
 .Noticiaweb{
+	width: 99%;
+	height: 100%;
 	padding: 0.8% 0 0 0;
-	grid-area: BC;
+	margin: 0 0% 20% 0.5%;
+	grid-area: cont;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-column-gap: 5px;
@@ -261,8 +231,11 @@ body{
 }
 
 .Peliculas{
+	width: 99%;
+	height: 100%;
 	padding: 0.8% 0 0 0;
-	grid-area: BC;
+	margin: 0 0% 20% 0.5%;
+	grid-area: cont;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-column-gap: 10%;
@@ -404,7 +377,7 @@ body{
 
 .barinf{
 	border-top: solid black 1px;
-	margin: 0 0 0 0;
+	margin: 5% 0 0 0;
 	grid-area: barinf;
 	background: white;
 }
