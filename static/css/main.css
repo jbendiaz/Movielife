@@ -10,8 +10,8 @@ body{
 	grid-template-areas: 
 	"top top" 
 	"nav nav" 
-	"cont cont " 
-	"barinf barinf";
+	"redes redes"
+	"cont cont " ;
 	grid-column-gap: 5px;
 }
 
@@ -38,6 +38,9 @@ body{
 	display: flex;
 	justify-content: center;
 }
+.top1{
+	font-size: 250%;
+}
 
 .bot{
 	margin: 0.5% 0 0 0;
@@ -61,60 +64,50 @@ body{
 	padding: 0.8% 0 0 0;
 	margin: 0 0% 20% 0.5%;
 	grid-area: cont;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-column-gap: 2%;
-	grid-row-gap: 2%;
-	grid-template-areas: 
-	"item1 item1 item2"
-	"item1 item1 item3"
-	"item4 item4 item4"
-	"item5 item6 item7"
-	"item8 item9 item10";
 }
 
-.item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9, .item10{
+.carousel{
+	margin: 2% 0 0% 5%;
+	padding: 0 0 0 0;
+	width: 90%;
+	height: 40%;
+}
 
+.GR{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
+	color: white;
+	align-items: center;
+}
+
+.g-col-4{
+	border: solid white 0.5px;
+	padding: 5% 5% 5% 5%;
+	margin: 3% 0 3% 0;
+}
+
+.row{
+	margin: 2% 0 2% 2%;
+}
+
+.item{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-content: center;
+	align-items: center;
+	width: 98%;
+	height: 3%;
+	font-size: 100%;
+	font-weight: bold;
+	margin-left: 1%;
 	color: white;
 	border: solid white 0.5px;
 	grid-area: item1;
 }
 
-.item2{
-	grid-area: item2;
-}
-
-.item3{
-	grid-area: item3;
-}
-
-.item4{
-	grid-area: item4;
-}
-
-.item5{
-	grid-area: item5;
-}
-
-.item6{
-	grid-area: item6;
-}
-
-.item7{
-	grid-area: item7;
-}
-
-.item8{
-	grid-area: item8;
-}
-
-.item9{
-	grid-area: item9;
-}
-
-.item10{
-	grid-area: item10;
-}
 
 .Registro{
 	width: 99%;
@@ -135,16 +128,16 @@ body{
 	border-right: solid white 0.5px;
 	border-radius: 10px;
 	grid-area: item1;
-	display: grid;
-	grid-template-columns: 1fr 2fr 1fr;
-	grid-template-areas: ". cua .";
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .Regis2{
 	font-family: calibre;
 	font-weight: bold;
 	font-size: 15px;	
-	grid-area: cua;
 	border: solid 1px;
 	margin: 10% 20% 10% 20%;
 	padding: 10% 5% 10% 5%;
@@ -158,136 +151,20 @@ body{
 	padding: 0.8% 0 0 0;
 	margin: 0 0% 20% 0.5%;
 	grid-area: cont;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-column-gap: 5px;
-	grid-row-gap: 2%	;
-	grid-template-areas: 
-	"not1 not1 not1"
-	"not2 not2 not2"
-	"not3 not3 not3"
-	"not4 not4 not4"
-	"not5 not5 not5"
-	"not6 not6 not6"
-	"not7 not7 not7"
-	"not8 not8 not8"
-	"not9 not9 not9"
-	"not10 not10 not10";
-
 }
 
-.not1, .not2, .not3, .not4, .not5, .not6, .not7, .not8, .not9, .not10{
-	color: white;
+.g-col-6{
 	border: solid white 0.5px;
-	border-bottom: solid black 0.5px;
-}
-
-.not1{
-	grid-area: not1;
-}
-
-.not2{
-	grid-area: not2;
-}
-
-.not3{
-	grid-area: not3;
-}
-
-.not4{
-	grid-area: not4;
-}
-
-.not5{
-	grid-area: not5;
-}
-
-.not6{
-	grid-area: not6;
-}
-
-.not7{
-	grid-area: not7;
-}
-
-.not8{
-	grid-area: not8;
-}
-
-.not9{
-	grid-area: not9;
-}
-
-.not10{
-	grid-area: not10;
-}
-
-.Peliculas{
-	width: 99%;
-	height: 100%;
-	padding: 0.8% 0 0 0;
-	margin: 0 0% 20% 0.5%;
-	grid-area: cont;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-column-gap: 10%;
-	grid-row-gap: 5px;
-	grid-template-areas: 
-	"peli1 peli2 peli3"
-	"peli4 peli5 peli6"
-	"peli7 peli8 peli9"
-	"peli10 . .";
-}
-
-.peli1, .peli2, .peli3, .peli4, .peli5, .peli6, .peli7, .peli8, .peli9, .peli10{
-	color: white;
-	border: solid white 0.5px;
-}
-
-.peli1{
-	grid-area: peli1;
+	padding: 5% 5% 5% 5%;
+	margin: 3% 0 3% 0;
 }
 
 
-.peli2{
-	grid-area: peli2;
-}
 
-.peli3{
-	grid-area: peli3;
-}
-
-.peli4{
-	grid-area: peli4;
-}
-
-.peli5{
-	grid-area: peli5;
-}
-
-.peli6{
-	grid-area: peli6;
-}
-
-.peli7{
-	grid-area: peli7;
-}
-
-.peli8{
-	grid-area: peli8;
-}
-
-.peli9{
-	grid-area: peli9;
-}
-
-.peli10{
-	grid-area: peli10;
-}
-
-.barinf{
+.redes{
+	font-size: 5px;
 	border-top: solid black 1px;
-	margin: 5% 0 0 0;
-	grid-area: barinf;
+	margin: 0 0 0 0;
+	grid-area: redes;
 	background: white;
 }
