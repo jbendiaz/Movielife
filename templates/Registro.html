@@ -5,27 +5,32 @@
 
 
 {% block body %}
-	<div class="Registro">
+
+<div class="Registro">
 		<div class="Regis">
 			<div class="Regis2">
+			    <form action="/registro" method="POST">
 				<div class="form-floating mb-3">
-		          <input type="text" class="form-control" id="floatingInput" placeholder="JExample">
-		          <label for="floatingInput">Usuario</label>
+		          <input type="text" class="form-control" id="username" name="username" placeholder="JExample">
+		          <label for="username">Usuario</label>
+		        </div>
+		        <!--
+		        <div class="form-floating mb-3">
+		          <input type="text" class="form-control" id="email" placeholder="name@example.com">
+		          <label for="email">Correo Electronico</label>
+		        </div>
+		    	-->
+		        <div class="form-floating mb-3">
+		          <input type="text" class="form-control" id="password" name="password" placeholder="gdfsgh">
+		          <label for="password">Contraseña</label>
 		        </div>
 		        <div class="form-floating mb-3">
-		          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-		          <label for="floatingInput">Correo Electronico</label>
+		          <input type="text" class="form-control" id="floatingInput" name="fullname" placeholder="gdfsgh">
+		          <label for="floatingInput">Nombre y Apellido</label>
 		        </div>
-		        <div class="form-floating mb-3">
-		          <input type="text" class="form-control" id="floatingInput" placeholder="gdfsgh">
-		          <label for="floatingInput">Contraseña</label>
-		        </div>
-		        <div class="form-floating mb-3">
-		          <input type="text" class="form-control" id="floatingInput" placeholder="gdfsgh">
-		          <label for="floatingInput">Confirmar Contraseña</label>
-		        </div>
-
-			<button class="btn btn-secondary btn-sm">Registrarse</button>
+		    	<button type="submit" class="btn btn-secondary btn-sm">Registrarse</button>
+		        </form>
+			
 			</div>
 		</div>
 	</div>

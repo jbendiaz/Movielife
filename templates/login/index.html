@@ -5,18 +5,54 @@
 
 
 {% block body %}
+
+  <!--<div class="item btn btn-secondary btn-sm"><h2>Bienvenido</h2>{% for usuario in usuarios %}<h2>{{ usuario.3}}</h2>{% endfor %}</div>-->
+
   <div class="BarCentral">
-    <div class="item1">1</div>
-    <div class="item2">2</div>
-    <div class="item3">3</div>
-    <div class="item4">4</div>
-    <div class="item5">5</div>
-    <div class="item6">6</div>
-    <div class="item7">7</div>
-    <div class="item8">8</div>
-    <div class="item9">9</div>
-    <div class="item10">10</div>
-  </div>
+    
+    <div class="item btn btn-secondary btn-sm"><h3>NOTICIAS</h3></div>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://www.anmosugoi.com/wp-content/uploads/2022/09/Chainsawman_Makima4.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://codigoespagueti.com/wp-content/uploads/2022/09/Chainsaw-Man-Makima-se-ha-convertido-en-el-mas-sexy-demonio-gracias-a-este-cosplay-3.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRkwIcicEpsLh6G0NCjD821ho6xN-xNfPieg&usqp=CAU" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="item btn btn-secondary btn-sm"><h3>EVENTOS</h3></div>
+    <div class="GR grid">
+      <div class="g-col-4">gasdfghfhdfahfhfdghfdgfdgfdgfgfdg</div>
+      <div class="g-col-4">fgfgafgdgdhfhdfdffhdhdfJ</div>
+      <div class="g-col-4">dgfdgdhghdfhghdghdhghñdñhgdgJ </div>
+    </div>
+    <div class="item btn btn-secondary btn-sm"><h3>ESTRENOS</h3></div>
+    <div class="GR grid">
+      <div class="g-col-4">gasdfghfhdfahfhfdghfdgfdgfdgfgfdg</div>
+      <div class="g-col-4">fgfgafgdgdhfhdfdffhdhdfJ</div>
+      <div class="g-col-4">dgfdgdhghdfhghdghdhghñdñhgdgJ </div>
+    </div>
+    <div class="item btn btn-secondary btn-sm"><h3>NUEVAS PELICULAS</h3></div>
+    <div class="GR grid">
+      <div class="g-col-4">gasdfghfhdfahfhfdghfdgfdgfdgfgfdg</div>
+      <div class="g-col-4">fgfgafgdgdhfhdfdffhdhdfJ</div>
+      <div class="g-col-4">dgfdgdhghdfhghdghdhghñdñhgdgJ </div>
+    </div>
+
+</div>
 
   
 {% endblock %}

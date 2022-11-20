@@ -1,8 +1,9 @@
-from flask import Flask, render_template, request, url_for, redirect, jsonify, flash 
+from flask import Flask, render_template, request, url_for, redirect, jsonify, flash, session, g 
 from flask_mysqldb import MySQL
 from config import config 
 from flask_wtf.csrf import CSRFProtect
 from flask_login import LoginManager, login_user, logout_user, login_required
+from werkzeug.security import check_password_hash, generate_password_hash
 
 # Models:
 from models.ModelUser import ModelUser
@@ -47,9 +48,29 @@ def logout():
     logout_user()
     return redirect(url_for('index'))
 
-@app.route("/registro")
+@app.route("/registro", methods=['GET','POST'])
 def registro():
-	return  render_template("Registro.html")
+    if request.method == 'POST':
+        name = request.form['username']
+        passw = request.form['password']
+        full = request.form['fullname']
+
+        cursor = db.connection.cursor()
+        cursor.execute("""INSERT INTO `user`(`id`, `username`, `password`, `fullname`) 
+        	VALUES (%s, %s, %s, %s)""",('[value-1]', name, generate_password_hash(passw), full));
+        db.connection.commit()
+        return redirect(url_for('principal'))
+        flash("Registro correcto")
+    else:
+    	return  render_template("Registro.html")
+        
+@app.route("/login/inicio")
+@login_required
+def indexlogin():
+	cursor = db.connection.cursor()
+	cursor.execute('SELECT * FROM `user` WHERE 1')
+	data = cursor.fetchall()
+	return  render_template("/login/index.html", usuarios = data)        
 
 @app.route("/noticia")
 def noticia():
@@ -103,11 +124,6 @@ def tpeliculas():
 def rpeliculas():
 	return  render_template("Recientes.html")
 
-
-
-@app.route("/login/inicio")
-def indexlogin():
-	return  render_template("/login/index.html")
 
 @app.route("/login/noticia")
 def noticialogin():

@@ -1,18 +1,20 @@
 body{
 	width: 100%;
+	height: 100%;
 	background: black;
 
 }
 
 .cuerpo{
 	display: grid;
-	grid-template-columns: 1fr 5fr;
+	grid-template-columns: 1fr;
 	grid-template-areas: 
-	"top top" 
-	"nav nav" 
-	"redes redes"
-	"cont cont " ;
+	"top" 
+	"nav" 
+	"redes"
+	"cont" ;
 	grid-column-gap: 5px;
+	grid-row-gap: 0;
 }
 
 .top{
@@ -20,8 +22,13 @@ body{
 	background: white;
 	width: 100%;
 	height: 80%;
-	display: grid;
-	grid-column-gap: 3px;
+}
+
+.navbar{
+	width: 100%;
+	height: 80%;
+	padding-top: 0.5%;
+	margin: 0;
 }
 
 .bn1{
@@ -29,33 +36,38 @@ body{
 	border-right: solid 2px;
 }
 
-.Barnav{
-	grid-area: nav;
-	background-color: white;
-	border: solid black 1px;
-	height: 90%;
-	padding: 0.5% 0.3% 0.3% 0.3%;
-	display: flex;
-	justify-content: center;
-}
-.top1{
-	font-size: 250%;
+.d-flex{
+	display: inline-block flex;
+	margin: 1%;
 }
 
 .bot{
-	margin: 0.5% 0 0 0;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-areas: "us re";
+	margin: 0 0 0 0;
+	display: flex;
 }
 
 .us{
+	width: 90%;
+	height: 100%;
 	grid-area: us;
 	margin-right: 5%;
+	display: flex;
 }
 
 .re{
+	width: 90%;
+	height: 100%;
 	grid-area: re;
+	margin-right: 10%;
+	display: flex;
+}
+
+.botlogin{
+	margin: 0 0 0 0;
+}
+
+.uslogin{
+	margin-right: 5%;
 }
 
 .BarCentral{
@@ -86,6 +98,8 @@ body{
 	border: solid white 0.5px;
 	padding: 5% 5% 5% 5%;
 	margin: 3% 0 3% 0;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .row{
@@ -156,15 +170,8 @@ body{
 .g-col-6{
 	border: solid white 0.5px;
 	padding: 5% 5% 5% 5%;
-	margin: 3% 0 3% 0;
+	margin: 3% 5% 3% 1%;
 }
 
 
 
-.redes{
-	font-size: 5px;
-	border-top: solid black 1px;
-	margin: 0 0 0 0;
-	grid-area: redes;
-	background: white;
-}

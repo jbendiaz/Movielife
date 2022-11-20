@@ -12,9 +12,10 @@
 <body>
   <div class="cuerpo">
 
-    <header class="top">
+    <header>
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
+        <a class="navbar-brand" href="/login/inicio"><h1 class="top1">Movie Life</h1></a>
       <!--  <a class="navbar-brand bn1" href="/login/noticia">Noticia</a> -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -35,45 +36,45 @@
                 Noticias
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/eventos"href="/noticia">Principales Noticias</a></li>
+                <li><a class="dropdown-item" href="/login/noticia">Principales Noticias</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="/disney">Disney</a></li>
+                <li><a class="dropdown-item" href="/login/disney">Disney</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="/warner">Warner</a></li>
+                <li><a class="dropdown-item" href="/login/warner">Warner</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="/marvel">Marvel</a></li>
+                <li><a class="dropdown-item" href="/login/marvel">Marvel</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="/dc">DC Comic</a></li>
+                <li><a class="dropdown-item" href="/login/dc">DC Comic</a></li>
               </ul>
             </li>
 
             <li class="nav-item dropdown">
-              <a class="navbar-brand dropdown-toggle bn1"  href="/noticia" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="navbar-brand dropdown-toggle bn1"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Eventos
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/eventos">Principales Eventos</a></li>
+                <li><a class="dropdown-item" href="/login/eventos">Principales Eventos</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="/disneye">Disney</a></li>
+                <li><a class="dropdown-item" href="/login/disneye">Disney</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="/warnere">Warner</a></li>
+                <li><a class="dropdown-item" href="/login/warnere">Warner</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="/marvele">Marvel</a></li>
+                <li><a class="dropdown-item" href="/login/marvele">Marvel</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="/dce">DC Comic</a></li>
+                <li><a class="dropdown-item" href="/login/dce">DC Comic</a></li>
               </ul>
             </li>
 
             <li class="nav-item">
-              <a class="navbar-brand bn1" href="/estrenos">Estrenos</a>
+              <a class="navbar-brand bn1" href="/login/estrenos">Estrenos</a>
             </li>
             <li class="nav-item dropdown">
               <a class="navbar-brand dropdown-toggle bn1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Descargar
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/todas_las_peliculas">Todas</a></li>
-                <li><a class="dropdown-item" href="/peliculas_recientes">Recientes</a></li>
+                <li><a class="dropdown-item" href="/login/todas_las_peliculas">Todas</a></li>
+                <li><a class="dropdown-item" href="/login/peliculas_recientes">Recientes</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="navbar-brand dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Genero
@@ -92,32 +93,24 @@
               </ul>
             </li>
            </ul>
+          </div>
+        </div>
+            <div class="botlogin">
+              <button class="uslogin btn btn-secondary btn-sm"><a class="dropdown-item" href="/logout">Cerrar sesión</button>
+            </div>
+            <div>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Buscar</button>
             </form>
-          </div>
-        </div>
       </nav>
     </header>
 
-    <div class="Barnav">
-      <a class="dropdown-item" href="/login/inicio"><h1 class="top1">Movie Life</h1></a>
-       <div class="top4">
-        <a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a>
-      </div>
-    </div>
- 
+
+
   {% block body %}
 
   {% endblock %}
-</div>
-
-    <footer class="barinf">
-      <div>
-        <h3>Redes Sociales</h3>
-      </div>
-    </footer>
 
 </div>
 
